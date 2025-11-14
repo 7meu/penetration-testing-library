@@ -1,0 +1,208 @@
+## Overview
+
+My (partial) methodology for offensive security / penetration testing, covering everything from networking and enumeration to privilege escalation, Active Directory attacks, web exploitation, and post-exploitation techniques. Not just a collection of notes, but also a practical, high-quality reference that helps both learning and real-world assessment workflows.
+
+## Key Features
+
+- **Clear theoretical explanations** breaking down core concepts.
+- **Practical methodologies and step-by-step workflows** based on hands-on techniques and proven approaches.
+- **Formal vulnerability descriptions** written in a style suitable for professional reporting.
+- **Remediation recommendations** to accelerate report-writing processes.
+- **Collection of security tools** / pre-compiled binaries.
+- **Ongoing updates** to improve clarity, depth, and technical coverage.
+
+## Notes
+  - **01. Enumeration**
+    - [checklist.md](Notes/01.%20Enumeration/checklist.md)
+    - [initial-enum.md](Notes/01.%20Enumeration/initial-enum.md)
+  - **02. Nmap**
+    - [misc.md](Notes/02.%20Nmap/misc.md)
+    - [nmap-full-flag.md](Notes/02.%20Nmap/nmap-full-flag.md)
+    - [protocol-scan.md](Notes/02.%20Nmap/protocol-scan.md)
+  - **03. Attacking Common Applications**
+    - **CMS**
+      - **Drupal**
+        - [enum.md](Notes/03.%20Attacking%20Common%20Applications/CMS/Drupal/enum.md)
+        - [exploit.md](Notes/03.%20Attacking%20Common%20Applications/CMS/Drupal/exploit.md)
+      - **Joomla**
+        - [enum.md](Notes/03.%20Attacking%20Common%20Applications/CMS/Joomla/enum.md)
+        - [exploit.md](Notes/03.%20Attacking%20Common%20Applications/CMS/Joomla/exploit.md)
+      - **Wordpress**
+        - [enum.md](Notes/03.%20Attacking%20Common%20Applications/CMS/Wordpress/enum.md)
+        - [exploit.md](Notes/03.%20Attacking%20Common%20Applications/CMS/Wordpress/exploit.md)
+    - **Common Gateway Interfaces**
+      - [shellshock.md](Notes/03.%20Attacking%20Common%20Applications/Common%20Gateway%20Interfaces/shellshock.md)
+      - [tomcat-cgi.md](Notes/03.%20Attacking%20Common%20Applications/Common%20Gateway%20Interfaces/tomcat-cgi.md)
+    - **Customer Service and Configuration Management**
+      - **GitLab**
+        - [enum.md](Notes/03.%20Attacking%20Common%20Applications/Customer%20Service%20and%20Configuration%20Management/GitLab/enum.md)
+        - [exploit.md](Notes/03.%20Attacking%20Common%20Applications/Customer%20Service%20and%20Configuration%20Management/GitLab/exploit.md)
+      - [OSTicket.md](Notes/03.%20Attacking%20Common%20Applications/Customer%20Service%20and%20Configuration%20Management/OSTicket.md)
+    - **Infrastructure and Network Monitoring**
+      - **Splunk**
+        - [enum.md](Notes/03.%20Attacking%20Common%20Applications/Infrastructure%20and%20Network%20Monitoring/Splunk/enum.md)
+        - [exploit.md](Notes/03.%20Attacking%20Common%20Applications/Infrastructure%20and%20Network%20Monitoring/Splunk/exploit.md)
+      - [prtg.md](Notes/03.%20Attacking%20Common%20Applications/Infrastructure%20and%20Network%20Monitoring/prtg.md)
+    - **Miscellaneous Applications**
+      - **Coldfusion**
+        - [enum.md](Notes/03.%20Attacking%20Common%20Applications/Miscellaneous%20Applications/Coldfusion/enum.md)
+        - [exploit.md](Notes/03.%20Attacking%20Common%20Applications/Miscellaneous%20Applications/Coldfusion/exploit.md)
+      - [iis-tilde.md](Notes/03.%20Attacking%20Common%20Applications/Miscellaneous%20Applications/iis-tilde.md)
+      - [ldap.md](Notes/03.%20Attacking%20Common%20Applications/Miscellaneous%20Applications/ldap.md)
+      - [misc.md](Notes/03.%20Attacking%20Common%20Applications/Miscellaneous%20Applications/misc.md)
+      - [web-mass-assignment.md](Notes/03.%20Attacking%20Common%20Applications/Miscellaneous%20Applications/web-mass-assignment.md)
+    - **Servlet Containers**
+      - **Jenkins**
+        - [enum.md](Notes/03.%20Attacking%20Common%20Applications/Servlet%20Containers/Jenkins/enum.md)
+        - [exploit.md](Notes/03.%20Attacking%20Common%20Applications/Servlet%20Containers/Jenkins/exploit.md)
+      - **Tomcat**
+        - [enum.md](Notes/03.%20Attacking%20Common%20Applications/Servlet%20Containers/Tomcat/enum.md)
+        - [exploit.md](Notes/03.%20Attacking%20Common%20Applications/Servlet%20Containers/Tomcat/exploit.md)
+    - **Thick Client Applications**
+      - [enum.md](Notes/03.%20Attacking%20Common%20Applications/Thick%20Client%20Applications/enum.md)
+      - [exploit.md](Notes/03.%20Attacking%20Common%20Applications/Thick%20Client%20Applications/exploit.md)
+    - [mitigation.md](Notes/03.%20Attacking%20Common%20Applications/mitigation.md)
+  - **04. Attacking Common Services**
+    - [dns.md](Notes/04.%20Attacking%20Common%20Services/dns.md)
+    - [ftp.md](Notes/04.%20Attacking%20Common%20Services/ftp.md)
+    - [rdp.md](Notes/04.%20Attacking%20Common%20Services/rdp.md)
+    - [smb.md](Notes/04.%20Attacking%20Common%20Services/smb.md)
+    - [smtp.md](Notes/04.%20Attacking%20Common%20Services/smtp.md)
+    - [sql.md](Notes/04.%20Attacking%20Common%20Services/sql.md)
+  - **05. Active Directory**
+    - **ACE**
+      - [acl-enum.md](Notes/05.%20Active%20Directory/ACE/acl-enum.md)
+      - [acl-exploit.md](Notes/05.%20Active%20Directory/ACE/acl-exploit.md)
+      - [acl.md](Notes/05.%20Active%20Directory/ACE/acl.md)
+      - [dcsync.md](Notes/05.%20Active%20Directory/ACE/dcsync.md)
+    - **Initial Enum**
+      - [commands.md](Notes/05.%20Active%20Directory/Initial%20Enum/commands.md)
+      - [enum.md](Notes/05.%20Active%20Directory/Initial%20Enum/enum.md)
+      - [external-recon.md](Notes/05.%20Active%20Directory/Initial%20Enum/external-recon.md)
+    - **Internal Enum**
+      - [linux.md](Notes/05.%20Active%20Directory/Internal%20Enum/linux.md)
+      - [lol.md](Notes/05.%20Active%20Directory/Internal%20Enum/lol.md)
+      - [security-controls.md](Notes/05.%20Active%20Directory/Internal%20Enum/security-controls.md)
+      - [windows.md](Notes/05.%20Active%20Directory/Internal%20Enum/windows.md)
+    - **Intro**
+      - [advanced-concepts.md](Notes/05.%20Active%20Directory/Intro/advanced-concepts.md)
+      - [basics.md](Notes/05.%20Active%20Directory/Intro/basics.md)
+      - [directory-delegation.md](Notes/05.%20Active%20Directory/Intro/directory-delegation.md)
+      - [method.md](Notes/05.%20Active%20Directory/Intro/method.md)
+    - **Kerberoasting**
+      - [linux.md](Notes/05.%20Active%20Directory/Kerberoasting/linux.md)
+      - [manual.md](Notes/05.%20Active%20Directory/Kerberoasting/manual.md)
+      - [mitigation.md](Notes/05.%20Active%20Directory/Kerberoasting/mitigation.md)
+      - [windows.md](Notes/05.%20Active%20Directory/Kerberoasting/windows.md)
+    - **LLMNR & NBT-NS Poisoning**
+      - [linux.md](Notes/05.%20Active%20Directory/LLMNR%20%26%20NBT-NS%20Poisoning/linux.md)
+      - [windows.md](Notes/05.%20Active%20Directory/LLMNR%20%26%20NBT-NS%20Poisoning/windows.md)
+    - **Misc**
+      - [bleeding-edge-vulns.md](Notes/05.%20Active%20Directory/Misc/bleeding-edge-vulns.md)
+      - [kerberos-double-hop.md](Notes/05.%20Active%20Directory/Misc/kerberos-double-hop.md)
+      - [misc.md](Notes/05.%20Active%20Directory/Misc/misc.md)
+      - [privileged-access.md](Notes/05.%20Active%20Directory/Misc/privileged-access.md)
+    - **Password Spraying**
+      - [linux.md](Notes/05.%20Active%20Directory/Password%20Spraying/linux.md)
+      - [overview.md](Notes/05.%20Active%20Directory/Password%20Spraying/overview.md)
+      - [password-policy.md](Notes/05.%20Active%20Directory/Password%20Spraying/password-policy.md)
+      - [spraying.md](Notes/05.%20Active%20Directory/Password%20Spraying/spraying.md)
+      - [windows.md](Notes/05.%20Active%20Directory/Password%20Spraying/windows.md)
+    - **Trusts**
+      - [cross-forest-linux.md](Notes/05.%20Active%20Directory/Trusts/cross-forest-linux.md)
+      - [cross-forest-windows.md](Notes/05.%20Active%20Directory/Trusts/cross-forest-windows.md)
+      - [linux.md](Notes/05.%20Active%20Directory/Trusts/linux.md)
+      - [overview.md](Notes/05.%20Active%20Directory/Trusts/overview.md)
+      - [windows.md](Notes/05.%20Active%20Directory/Trusts/windows.md)
+    - [mitigation.md](Notes/05.%20Active%20Directory/mitigation.md)
+  - **06. Linux Privilege Escalation**
+    - **0days**
+      - [dirty-pipe.md](Notes/06.%20Linux%20Privilege%20Escalation/0days/dirty-pipe.md)
+      - [netfilter.md](Notes/06.%20Linux%20Privilege%20Escalation/0days/netfilter.md)
+      - [polkit.md](Notes/06.%20Linux%20Privilege%20Escalation/0days/polkit.md)
+      - [sudo.md](Notes/06.%20Linux%20Privilege%20Escalation/0days/sudo.md)
+    - [capabilities.md](Notes/06.%20Linux%20Privilege%20Escalation/capabilities.md)
+    - [cred-hunting.md](Notes/06.%20Linux%20Privilege%20Escalation/cred-hunting.md)
+    - [cron.md](Notes/06.%20Linux%20Privilege%20Escalation/cron.md)
+    - [docker.md](Notes/06.%20Linux%20Privilege%20Escalation/docker.md)
+    - [environment-enum.md](Notes/06.%20Linux%20Privilege%20Escalation/environment-enum.md)
+    - [groups.md](Notes/06.%20Linux%20Privilege%20Escalation/groups.md)
+    - [kernel.md](Notes/06.%20Linux%20Privilege%20Escalation/kernel.md)
+    - [kubernetes.md](Notes/06.%20Linux%20Privilege%20Escalation/kubernetes.md)
+    - [logrotate.md](Notes/06.%20Linux%20Privilege%20Escalation/logrotate.md)
+    - [lxc.md](Notes/06.%20Linux%20Privilege%20Escalation/lxc.md)
+    - [misc.md](Notes/06.%20Linux%20Privilege%20Escalation/misc.md)
+    - [mitigation.md](Notes/06.%20Linux%20Privilege%20Escalation/mitigation.md)
+    - [path.md](Notes/06.%20Linux%20Privilege%20Escalation/path.md)
+    - [py-lib.md](Notes/06.%20Linux%20Privilege%20Escalation/py-lib.md)
+    - [restricted-shells.md](Notes/06.%20Linux%20Privilege%20Escalation/restricted-shells.md)
+    - [services-enum.md](Notes/06.%20Linux%20Privilege%20Escalation/services-enum.md)
+    - [services.md](Notes/06.%20Linux%20Privilege%20Escalation/services.md)
+    - [shared-lib.md](Notes/06.%20Linux%20Privilege%20Escalation/shared-lib.md)
+    - [shared-object.md](Notes/06.%20Linux%20Privilege%20Escalation/shared-object.md)
+    - [special-perm.md](Notes/06.%20Linux%20Privilege%20Escalation/special-perm.md)
+    - [sudo.md](Notes/06.%20Linux%20Privilege%20Escalation/sudo.md)
+    - [wildcard-abuse.md](Notes/06.%20Linux%20Privilege%20Escalation/wildcard-abuse.md)
+  - **07. Windows Privilege Escalation**
+    - **Additional Techniques**
+      - [force-auth.md](Notes/07.%20Windows%20Privilege%20Escalation/Additional%20Techniques/force-auth.md)
+      - [misc.md](Notes/07.%20Windows%20Privilege%20Escalation/Additional%20Techniques/misc.md)
+      - [pillaging.md](Notes/07.%20Windows%20Privilege%20Escalation/Additional%20Techniques/pillaging.md)
+    - **End-of-life systems**
+      - [mitigation.md](Notes/07.%20Windows%20Privilege%20Escalation/End-of-life%20systems/mitigation.md)
+      - [windows-desktop.md](Notes/07.%20Windows%20Privilege%20Escalation/End-of-life%20systems/windows-desktop.md)
+      - [windows-server.md](Notes/07.%20Windows%20Privilege%20Escalation/End-of-life%20systems/windows-server.md)
+    - **Group Privileges**
+      - [backup-operators.md](Notes/07.%20Windows%20Privilege%20Escalation/Group%20Privileges/backup-operators.md)
+      - [dns-admins.md](Notes/07.%20Windows%20Privilege%20Escalation/Group%20Privileges/dns-admins.md)
+      - [event-log-readers.md](Notes/07.%20Windows%20Privilege%20Escalation/Group%20Privileges/event-log-readers.md)
+      - [hyper-v-admins.md](Notes/07.%20Windows%20Privilege%20Escalation/Group%20Privileges/hyper-v-admins.md)
+      - [print-operators.md](Notes/07.%20Windows%20Privilege%20Escalation/Group%20Privileges/print-operators.md)
+      - [server-operators.md](Notes/07.%20Windows%20Privilege%20Escalation/Group%20Privileges/server-operators.md)
+    - **OS**
+      - [dll-injection.md](Notes/07.%20Windows%20Privilege%20Escalation/OS/dll-injection.md)
+      - [kernel.md](Notes/07.%20Windows%20Privilege%20Escalation/OS/kernel.md)
+      - [services.md](Notes/07.%20Windows%20Privilege%20Escalation/OS/services.md)
+      - [uac.md](Notes/07.%20Windows%20Privilege%20Escalation/OS/uac.md)
+      - [weak-perm.md](Notes/07.%20Windows%20Privilege%20Escalation/OS/weak-perm.md)
+    - **User Privileges**
+      - [SeDebugPrivilege.md](Notes/07.%20Windows%20Privilege%20Escalation/User%20Privileges/SeDebugPrivilege.md)
+      - [SeImpersonate.md](Notes/07.%20Windows%20Privilege%20Escalation/User%20Privileges/SeImpersonate.md)
+      - [SeTakeOwnershipPrivilege.md](Notes/07.%20Windows%20Privilege%20Escalation/User%20Privileges/SeTakeOwnershipPrivilege.md)
+    - [cheat-sheet.md](Notes/07.%20Windows%20Privilege%20Escalation/cheat-sheet.md)
+    - [citrix-breakout.md](Notes/07.%20Windows%20Privilege%20Escalation/citrix-breakout.md)
+    - [cred-hunting.md](Notes/07.%20Windows%20Privilege%20Escalation/cred-hunting.md)
+    - [enum.md](Notes/07.%20Windows%20Privilege%20Escalation/enum.md)
+  - [08. Server-Side Attacks.md](Notes/08.%20Server-Side%20Attacks.md)
+  - **09. Web Attacks**
+    - [idor.md](Notes/09.%20Web%20Attacks/idor.md)
+    - [verb-tampering.md](Notes/09.%20Web%20Attacks/verb-tampering.md)
+    - [xxe.md](Notes/09.%20Web%20Attacks/xxe.md)
+  - [10. API Attacks.md](Notes/10.%20API%20Attacks.md)
+  - [11. Command Injections.md](Notes/11.%20Command%20Injections.md)
+  - [12. SQL Injection.md](Notes/12.%20SQL%20Injection.md)
+  - **13. XSS**
+    - [rce.md](Notes/13.%20XSS/rce.md)
+    - [session-hijacking.md](Notes/13.%20XSS/session-hijacking.md)
+  - [14. Login Brute Forcing.md](Notes/14.%20Login%20Brute%20Forcing.md)
+  - [15. Password Attacks.md](Notes/15.%20Password%20Attacks.md)
+  - [16. Sessions.md](Notes/16.%20Sessions.md)
+  - [17. File Transfers.md](Notes/17.%20File%20Transfers.md)
+  - [18. File Upload Attacks.md](Notes/18.%20File%20Upload%20Attacks.md)
+  - [19. Shells.md](Notes/19.%20Shells.md)
+  - [20. Upgrading Shells.md](Notes/20.%20Upgrading%20Shells.md)
+  - [21. Metasploit.md](Notes/21.%20Metasploit.md)
+  - **22. File Inclusion**
+    - **File Disclosure**
+      - [bypasses.md](Notes/22.%20File%20Inclusion/File%20Disclosure/bypasses.md)
+      - [lfi.md](Notes/22.%20File%20Inclusion/File%20Disclosure/lfi.md)
+      - [php-filters.md](Notes/22.%20File%20Inclusion/File%20Disclosure/php-filters.md)
+    - **Remote Code Execution**
+      - [lfi-file-uploads.md](Notes/22.%20File%20Inclusion/Remote%20Code%20Execution/lfi-file-uploads.md)
+      - [log-poisoning.md](Notes/22.%20File%20Inclusion/Remote%20Code%20Execution/log-poisoning.md)
+      - [php-wrappers.md](Notes/22.%20File%20Inclusion/Remote%20Code%20Execution/php-wrappers.md)
+      - [rfi.md](Notes/22.%20File%20Inclusion/Remote%20Code%20Execution/rfi.md)
+    - [mitigation.md](Notes/22.%20File%20Inclusion/mitigation.md)
+  - [23. Ligolo-ng.md](Notes/23.%20Ligolo-ng.md)
+  - [24. Pivoting, Tunnelling and Port Forwarding.md](Notes/24.%20Pivoting%2C%20Tunnelling%20and%20Port%20Forwarding.md)
+  - [25. Cheat Sheet.md](Notes/25.%20Cheat%20Sheet.md)
