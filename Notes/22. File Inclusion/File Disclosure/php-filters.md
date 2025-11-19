@@ -1,36 +1,5 @@
 # PHP Filters
 
-## Key Takeaways
-
-### PHP Wrappers
-Provide access to different I/O streams in PHP via the `php://` scheme. Useful for extending LFI attacks.
-
-### PHP Filter Wrapper
-Accessed through:
-
-```
-
-php://filter/
-
-```
-
-Key parameters:
-
-- `read=` - filter to apply
-- `resource=` - file to read
-
-Most commonly used filter:
-
-```
-
-convert.base64-encode
-
-```
-
-Allows reading PHP source code instead of executing it.
-
----
-
 ## Reading PHP Source Code
 
 ### Example LFI Without Filters
