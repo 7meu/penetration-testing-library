@@ -9,7 +9,7 @@
 
 ### Ports
 
-* MSSQL: 1433 (TCP), 1434 (UDP), 2433 (TCP)
+* MSSQL: 1433 (TCP), 1434 (UDP)
 * MySQL: 3306 (TCP)
 
 ### Nmap
@@ -139,5 +139,5 @@ EXECUTE('query') AT [<linked_server>]; GO
 
 ```bash
 responder -I <interface>
-impacket-smbserver share ./ -smb2support
+impacket-smbserver share ./ -smb2support -debug
 ```

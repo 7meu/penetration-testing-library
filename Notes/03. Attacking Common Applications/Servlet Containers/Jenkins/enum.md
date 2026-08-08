@@ -28,11 +28,11 @@ These methods reveal version and environment details useful for identifying know
 
 | Port | Purpose                   |
 | ---- | ------------------------- |
-| 8080 | Web Interface (HTTP)      |
-| 5000 | Slave/Agent Communication |
+| 8080  | Web Interface (HTTP)      |
+| 50000 | Slave/Agent Communication |
 
 ```bash
-nmap -sV -p 8080,5000 <target_ip>
+nmap -sV -p 8080,50000 <target_ip>
 ```
 
 ---

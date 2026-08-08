@@ -81,7 +81,7 @@ nmap -sV --script=ssh-hostkey -p22 IP
 
 ### 2.4 SMTP (port 25)
 
-* Check version with `HELO` or `HELLO <domain>` and identify vulnerabilities.
+* Check version with `HELO` or `EHLO <domain>` and identify vulnerabilities.
 
 ### 2.5 POP (port 110)
 

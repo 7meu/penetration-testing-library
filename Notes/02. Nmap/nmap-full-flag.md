@@ -105,9 +105,9 @@ nmap 192.168.1.0/24                                 # Scan with CIDR
 --script default                 # Equivalent
 --script=banner                  # Run specific script
 --script=http*                   # Wildcard
---script=http,banner              # Multiple scripts
---script "not intrusive"          # Exclude intrusive
---script-args                     # Script arguments
+--script=http-title,banner       # Multiple scripts
+--script "not intrusive"         # Exclude intrusive
+--script-args                    # Script arguments
 ```
 
 ### 9.1 Example NSE Scripts

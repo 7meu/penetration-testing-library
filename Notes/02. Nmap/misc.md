@@ -50,5 +50,4 @@ Reducing scan time helps evade IDS detection, while increasing speed may appear 
 
 * `-oN <filename>` - Save as normal text file
 * `-oX <filename>` - Save as XML file
-* `-oS <filename>` - Save as script (for Metasploit)
 * `-oA <basename>` - Save in all formats (`.nmap`, `.xml`, `.gnmap`)

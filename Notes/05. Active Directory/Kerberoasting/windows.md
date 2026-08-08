@@ -47,7 +47,7 @@ python2.7 kirbi2john.py sqldev.kirbi
 ## Fix Hash Format for Hashcat (Linux)
 
 ```bash
-sed 's/\$krb5tgs\$(.*):(.*)/\$krb5tgs\$23\$\*\1\*\$\2/' crack_file > sqldev_tgs_hashcat
+sed 's/\$krb5tgs\$\(.*\):\(.*\)/\$krb5tgs\$23\$\*\1\*\$\2/' crack_file > sqldev_tgs_hashcat
 ```
 
 ## View Prepared Hash (Linux)

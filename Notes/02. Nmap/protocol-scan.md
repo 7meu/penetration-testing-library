@@ -14,7 +14,6 @@ nmap -p 636 --script=ldap-search,ldap-rootdse <target>
 
 ```bash
 nmap -p 88 --script=krb5-enum-users --script-args="krb5-enum-users.realm='DOMAIN.LOCAL'" <target>
-nmap -p 88 --script=krb5-info <target>
 ```
 
 #### SMB (139, 445)
@@ -22,7 +21,6 @@ nmap -p 88 --script=krb5-info <target>
 ```bash
 nmap -p 139,445 --script=smb-enum-shares,smb-enum-users,smb-os-discovery,smb-security-mode,smb2-capabilities,smb2-security-mode <target>
 nmap --script smb-vuln* -p 445 <target>
-nmap -p 445 --script=smb-null-session <target>
 ```
 
 #### RDP (3389)
@@ -36,8 +34,7 @@ nmap -p 3389 --script=rdp-ntlm-info <target>
 #### WinRM (5985, 5986)
 
 ```bash
-nmap -p 5985,5986 --script=http-windows-enum <target>
-nmap -p 5985,5986 --script=winrm-enum-users <target>
+nmap -p 5985,5986 -sV <target>
 ```
 
 ### Network Services
@@ -99,13 +96,13 @@ nmap -sU -p 161,162 --script=snmp-info,snmp-interfaces,snmp-processes,snmp-win32
 #### R-Services (512, 513, 514)
 
 ```bash
-nmap -p 512,513,514 --script=rpcinfo <target>
+nmap -p 512,513,514 --script=rexec-brute,rlogin-brute <target>
 ```
 
 #### IPMI (623)
 
 ```bash
-nmap -p 623 --script=ipmi-version,ipmi-cipher-zero <target>
+nmap -sU -p 623 --script=ipmi-version,ipmi-cipher-zero <target>
 ```
 
 #### RSync (873)
@@ -114,10 +111,10 @@ nmap -p 623 --script=ipmi-version,ipmi-cipher-zero <target>
 nmap -p 873 --script=rsync-list-modules <target>
 ```
 
-#### MSSQL (1433, 1434, 2433)
+#### MSSQL (1433, 1434)
 
 ```bash
-nmap -p 1433,1434,2433 --script=ms-sql-info,ms-sql-empty-password,ms-sql-dump-hashes,ms-sql-brute,ms-sql-config <target>
+nmap -p 1433,1434 --script=ms-sql-info,ms-sql-empty-password,ms-sql-dump-hashes,ms-sql-brute,ms-sql-config <target>
 ```
 
 #### Oracle TNS (1521)
@@ -129,7 +126,7 @@ nmap -p 1521 --script=oracle-tns-version,oracle-sid-brute <target>
 #### NFS (2049)
 
 ```bash
-nmap -p 2049 --script=nfs-ls,nfs-statfs,nfs-showmount,nfs-acls <target>
+nmap -p 2049 --script=nfs-ls,nfs-statfs,nfs-showmount <target>
 ```
 
 #### MySQL (3306)
@@ -141,15 +138,18 @@ nmap -p 3306 --script=mysql-info,mysql-users,mysql-databases,mysql-empty-passwor
 #### PostgreSQL (5432)
 
 ```bash
-nmap -p 5432 --script=pgsql-brute,pgsql-databases,pgsql-users <target>
-nmap -p 5432 --script=pgsql-enum <target>
+nmap -p 5432 --script=pgsql-brute <target>
 ```
 
-#### PostgreSQL Secure (5433)
+* `pgsql-brute` is the only PostgreSQL NSE script Nmap ships; database/role enumeration otherwise requires an authenticated `psql` connection.
+
+#### PostgreSQL (Alternate Instance, 5433)
 
 ```bash
-nmap -p 5433 --script=pgsql-info <target>
+nmap -p 5433 -sV --script=pgsql-brute <target>
 ```
+
+* PostgreSQL negotiates SSL/TLS on the same port as normal connections — 5433 is just a common convention for a second instance, not a dedicated "secure" port.
 
 #### NetBIOS (137, 138)
 
@@ -172,7 +172,7 @@ nmap -p 6379 --script=redis-info,redis-brute <target>
 #### Elasticsearch (9200)
 
 ```bash
-nmap -p 9200 --script=http-elasticsearch-head,http-title,http-methods,http-headers <target>
+nmap -p 9200 --script=http-title,http-methods,http-headers <target>
 ```
 
 #### Memcached (11211)
@@ -196,7 +196,7 @@ nmap -sU -p 5060 --script=sip-methods,sip-enum-users <target>
 #### MQTT (1883)
 
 ```bash
-nmap -p 1883 --script=mqtt-subscribe,mqtt-connect <target>
+nmap -p 1883 --script=mqtt-subscribe <target>
 ```
 
 #### RMI (1099)
@@ -220,13 +220,13 @@ nmap -p 2375 --script=docker-version <target>
 #### RabbitMQ (5672)
 
 ```bash
-nmap -p 5672 --script=rabbitmq-info <target>
+nmap -p 5672 --script=amqp-info <target>
 ```
 
 #### Jenkins (8080)
 
 ```bash
-nmap -p 8080 --script=http-jenkins-info,http-headers,http-title <target>
+nmap -p 8080 --script=http-headers,http-title,http-enum <target>
 ```
 
 #### AJP (8009)
@@ -238,13 +238,13 @@ nmap -p 8009 --script=ajp-methods,ajp-headers,ajp-auth <target>
 #### Kubernetes API Server (6443)
 
 ```bash
-nmap -p 6443 --script=http-kubernetes-info,http-headers,http-title <target>
+nmap -p 6443 --script=http-headers,http-title <target>
 ```
 
 #### CouchDB (5984)
 
 ```bash
-nmap -p 5984 --script=http-couchdb-info,http-title,http-headers <target>
+nmap -p 5984 --script=couchdb-databases,couchdb-stats,http-title,http-headers <target>
 ```
 
 #### VMware (902, 903, 443)
@@ -256,13 +256,13 @@ nmap -p 902,903,443 --script=vmware-version <target>
 #### TeamViewer (5938)
 
 ```bash
-nmap -p 5938 --script=teamviewer-info <target>
+nmap -p 5938 -sV <target>
 ```
 
 #### Bacula (9101)
 
 ```bash
-nmap -p 9101 --script=bacula-info <target>
+nmap -p 9101 -sV <target>
 ```
 
 #### X11 (6000)
@@ -286,25 +286,26 @@ nmap -p 80,443,8080 --script=http-webdav-scan <target>
 #### Apache Hadoop (50070)
 
 ```bash
-nmap -p 50070 --script=http-hadoop-info <target>
+nmap -p 50070 --script=hadoop-namenode-info <target>
 ```
 
 #### Tomcat (8080, 8443)
 
 ```bash
-nmap -p 8080,8443 --script=http-tomcat-manager,http-tomcat-users <target>
+nmap -p 8080,8443 --script=http-title,http-headers,http-enum <target>
 ```
 
 #### Zookeeper (2181)
 
 ```bash
-nmap -p 2181 --script=zookeeper-info <target>
+nmap -p 2181 -sV <target>
+echo stat | nc <target> 2181
 ```
 
 #### Kafka (9092)
 
 ```bash
-nmap -p 9092 --script=kafka-info <target>
+nmap -p 9092 -sV <target>
 ```
 
 #### Varnish (6081)

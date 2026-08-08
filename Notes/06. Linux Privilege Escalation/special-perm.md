@@ -7,7 +7,7 @@
 find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null
 
 # Find setgid files owned by root
-find / -user root -perm -6000 -exec ls -ldb {} \; 2>/dev/null
+find / -user root -perm -2000 -exec ls -ldb {} \; 2>/dev/null
 
 # Find all setuid files (any owner)
 find / -perm -4000 -exec ls -ldb {} \; 2>/dev/null
@@ -65,7 +65,7 @@ find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null
 Example enumeration:
 
 ```bash
-find / -user root -perm -6000 -exec ls -ldb {} \; 2>/dev/null
+find / -user root -perm -2000 -exec ls -ldb {} \; 2>/dev/null
 ```
 
 ---

