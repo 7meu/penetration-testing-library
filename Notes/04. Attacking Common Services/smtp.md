@@ -38,6 +38,9 @@ dig txt <domain>
 nmap -Pn -sV -sC -p25,143,110,465,587,993,995 <target_IP>
 ```
 
+### Misc
+If you see port 25 or SMTP on the target, always look through `/var/mail/` and `/var/spool/mail`.
+
 ## 3. Misconfigurations
 
 ### SMTP User Enumeration

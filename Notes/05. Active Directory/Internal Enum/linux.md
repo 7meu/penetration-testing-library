@@ -13,6 +13,7 @@ crackmapexec smb <target_ip> -u <username> -p <password> --groups
 crackmapexec smb <target_ip> -u <username> -p <password> --loggedon-users
 crackmapexec smb <target_ip> -u <username> -p <password> --shares
 crackmapexec smb <target_ip> -u <username> -p <password> -M spider_plus --share '<share_name>'
+certipy-ad -u USER -p PASS -target TARGET -text -stdout -vulnerable
 ```
 
 ### 2. SMBMap

