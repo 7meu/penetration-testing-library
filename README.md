@@ -1,14 +1,12 @@
 ## Overview
-
-My (partial) methodology for offensive security / penetration testing, covering everything from networking and enumeration to privilege escalation, Active Directory attacks, web exploitation, and post-exploitation techniques. Not just a collection of notes, but also a practical, high-quality reference that helps both learning and real-world assessment workflows.
+My (partial) methodology for offensive security / penetration testing, covering everything from networking and enumeration to privilege escalation, Active Directory attacks, web exploitation, wireless attacks and post-exploitation techniques. Not just a collection of notes - also a practical reference that helps both learning and real-world assessment workflows.
 
 ## Key Features
-
-- **Clear theoretical explanations** breaking down core concepts.
-- **Practical methodologies and step-by-step workflows** based on hands-on techniques and proven approaches.
-- **Formal vulnerability descriptions** written in a style suitable for professional reporting.
-- **Remediation recommendations** to accelerate report-writing processes.
-- **Collection of security tools** / pre-compiled binaries.
+- **Clear theoretical explanations**
+- **Practical methodologies** and step-by-step workflows
+- **Formal vulnerability descriptions** written in a style suitable for professional reporting
+- **Remediation recommendations** (report-ready)
+- **Security tools** / pre-compiled binaries
 - **Ongoing updates** to improve clarity, depth, and technical coverage.
 
 ## Notes
@@ -207,3 +205,11 @@ My (partial) methodology for offensive security / penetration testing, covering 
   - [24. Pivoting, Tunnelling and Port Forwarding.md](Notes/24.%20Pivoting%2C%20Tunnelling%20and%20Port%20Forwarding.md)
   - [25. Cheat Sheet.md](Notes/25.%20Cheat%20Sheet.md)
   - [26. Binary Exploitation.md](Notes/26.%20Binary%20Exploitation.md)
+  - **27. Wi-Fi Hacking**
+    - [captive-portals.md](Notes/27.%20Wi-Fi%20Hacking/captive-portals.md)
+    - [connect-to-ap.md](Notes/27.%20Wi-Fi%20Hacking/connect-to-ap.md)
+    - [rogue-ap.md](Notes/27.%20Wi-Fi%20Hacking/rogue-ap.md)
+    - [tools.md](Notes/27.%20Wi-Fi%20Hacking/tools.md)
+    - [wep-iv-attack.md](Notes/27.%20Wi-Fi%20Hacking/wep-iv-attack.md)
+    - [wpa-psk-handshake-crack.md](Notes/27.%20Wi-Fi%20Hacking/wpa-psk-handshake-crack.md)
+    - [wps-attacks.md](Notes/27.%20Wi-Fi%20Hacking/wps-attacks.md)
